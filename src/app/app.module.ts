@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { GroupsRepositoryFactory, PeopleRepositoryFactory } from './core/repositories/repository.factory';
 import { PeopleService } from './core/services/impl/people.service';
 import { GROUPS_API_URL_TOKEN, GROUPS_REPOSITORY_MAPPING_TOKEN, GROUPS_RESOURCE_NAME_TOKEN, PEOPLE_API_URL_TOKEN, PEOPLE_REPOSITORY_MAPPING_TOKEN, PEOPLE_RESOURCE_NAME_TOKEN } from './core/repositories/repository.tokens';
-import { provideHttpClient } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { PeopleLocalStorageMapping } from './core/repositories/impl/people-mapping-local-storage.service';
 import { PeopleMappingJsonServer } from './core/repositories/impl/people-mapping-json-server.service';
 import { GroupsMappingJsonServer } from './core/repositories/impl/groups-mapping-json-server.service';
@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { GroupSelectableComponent } from './components/group-selectable/group-selectable.component';
 import { PeopleMappingStrapi } from './core/repositories/impl/people-mapping-strapi.service';
 import { GroupsMappingStrapi } from './core/repositories/impl/groups-mapping-strapi.service';
+
 @NgModule({
   declarations: [AppComponent, PersonModalComponent, GroupSelectableComponent],
   imports: [
